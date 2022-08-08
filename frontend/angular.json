@@ -29,7 +29,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/custom-theme.scss"
+              "src/assets/styles/cutom-theme.scss"
             ],
             "scripts": []
           },
@@ -98,7 +98,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/custom-theme.scss"
+              "src/assets/styles/cutom-theme.scss"
             ],
             "scripts": []
           }
