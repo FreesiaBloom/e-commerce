@@ -3,10 +3,45 @@
     <app-item-details></app-item-details>
   </mat-drawer>
 
-  <div>
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
-  </div>
+
+  <mat-drawer-content>
+    <div>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+    <ul class="plant-list">
+      <li *ngFor="let item of cartItems"  class="plant-list-item">
+        <a routerLink="/cartItem/{{item.id}}">
+          <button *ngIf="!item.favorite" mat-icon-button class="icon-button favorite-icon" aria-label="Example icon button with a heart icon">
+            <mat-icon>favorite_outline</mat-icon>
+          </button>
+          <button *ngIf="item.favorite" mat-icon-button class="icon-button favorite-icon" aria-label="Example icon button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <img [src]="item.imageUrl" [alt]="item.name" />
+          <div class="plant-list-item-content">
+            <div>
+
+              {{item.name}}
+            </div>
+            <div>
+
+              {{item.stars}} / 5
+            </div>
+            <div  class="plant-list-item-footer">
+              <div>
+                <span>Price</span>
+                {{item.price | currency}}
+              </div>
+              <div>
+                <button>add to card</button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </mat-drawer-content>
 
 </mat-drawer-container>

@@ -1,0 +1,48 @@
+@import 'src/assets/styles/variables.scss';
+
+.plant-list {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+
+  &-item {
+    .favorite-icon {
+      color: $warm;
+      position: absolute;
+
+      &:hover {
+        background-color: rgba($warm, 0.2);
+      }
+    }
+
+    &-content {
+      margin-top: 0.3rem;
+      padding: .5rem 1rem;
+      height: 7rem;
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      width: 20rem;
+      border: 1px solid $border-grey;
+      border-radius: 8px;
+      margin: .5rem;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+        height: 22.5rem;
+      }
+    }
+  }
+}
