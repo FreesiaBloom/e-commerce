@@ -11,10 +11,50 @@ header {
     display: flex;
     justify-content: space-between;
 
-    nav ul {
-      display: flex;
-      text-decoration: none;
-      list-style: none;
+    nav {
+      ul {
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+
+        li {
+          position: relative;
+
+          .active {
+            position: absolute;
+            right: 0;
+            top: 38px;
+            width: 100%;
+            height: 2px;
+            border-width: 0;
+            color: $primary;
+            background-color: $primary;
+          }
+        }
+      }
+    }
+
+    .icon-button {
+      position: relative;
+
+      &:hover {
+        background-color: $hover;
+      }
+
+      .notification {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: $warm;
+        color: $white;
+        padding: 1px 5px;
+        font-size: .75rem;
+        letter-spacing: 0;
+        line-height: 1rem;
+        border-radius: 10px;
+      }
     }
   }
 }
