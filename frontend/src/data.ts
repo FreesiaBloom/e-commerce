@@ -1,6 +1,6 @@
-import { Item } from "./app/shared/models/Item";
+import { CartItem } from "./app/shared/models/CartItem";
 
-export const sampleItem: Item[] = [
+export const sampleCartItem: CartItem[] = [
   {
     id:'1',
     name: 'Monstera Monkey Mask',
