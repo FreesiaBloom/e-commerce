@@ -4,7 +4,7 @@
 
 $custom-primary: mat.define-palette(mat.$green-palette, 700); // #388E3C
 $custom-accent: mat.define-palette(mat.$amber-palette, 400); // # FFCA28
-$custom-warn: mat.define-palette(mat.$red-palette, 400); // #EF5350
+$custom-warm: mat.define-palette(mat.$red-palette, 400); // #EF5350
 
 $custom-theme: mat.define-light-theme((
  color: (
