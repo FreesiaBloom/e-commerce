@@ -1,6 +1,20 @@
+@import 'src/assets/styles/variables.scss';
+
 .side-nav {
-  ul {
+  width: 16vw;
+
+  &-header {
+    padding: 16px;
+    border-bottom: 1px solid $border-grey;
+  }
+
+  &-title {
+    font-weight: bold;
+  }
+
+  &-categories {
     list-style: none;
-    padding: 0;
+    padding: 16px;
+    margin: 0;
   }
 }

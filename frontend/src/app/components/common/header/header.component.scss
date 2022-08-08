@@ -11,6 +11,15 @@ header {
     display: flex;
     justify-content: space-between;
 
+    .header-logo {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        padding-left: 4px;
+      }
+    }
+
     nav {
       ul {
         margin: 0 auto;
