@@ -10,13 +10,19 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { SideNavComponent } from './components/common/side-nav/side-nav.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ShopComponent } from './components/pages/shop/shop.component';
+import { ItemDetailsComponent } from './components/shared/item-details/item-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    ShopComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,9 @@ import { SideNavComponent } from './components/common/side-nav/side-nav.componen
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
