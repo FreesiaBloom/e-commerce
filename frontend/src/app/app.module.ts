@@ -14,7 +14,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { SideNavComponent } from './components/common/side-nav/side-nav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ShopComponent } from './components/pages/shop/shop.component';
-import { ItemDetailsComponent } from './components/shared/item-details/item-details.component';
+import { ItemDetailsComponent } from './components/common/item/item-details/item-details.component';
 
 @NgModule({
   declarations: [
