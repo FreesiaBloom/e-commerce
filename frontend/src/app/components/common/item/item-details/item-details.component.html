@@ -1,1 +1,6 @@
-<p>item-details works!</p>
+<div class="details">
+  <button type="button" mat-button (click)="emitCloseEvent()">
+    Close
+  </button>
+  <img [src]="cartItem.imageUrl" [alt]="cartItem.name" />
+</div>

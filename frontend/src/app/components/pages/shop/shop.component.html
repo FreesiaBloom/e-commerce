@@ -1,12 +1,16 @@
 <mat-drawer-container class="drawer-container" autosize>
-  <mat-drawer #drawer mode="side" position="end">
-    <app-item-details></app-item-details>
+  <!-- side-nav drawers -->
+  <mat-drawer mode="side" opened >
+    <app-side-nav></app-side-nav>
+  </mat-drawer>
+  <mat-drawer #drawer mode="side" position="end"  [opened]="detailsViewOpened">
+    <app-item-details (closeEvent)="getDetailsViewStatus()"></app-item-details>
   </mat-drawer>
 
-
+  <!-- main content -->
   <mat-drawer-content>
     <div>
-      <button type="button" mat-button (click)="drawer.toggle()">
+      <button type="button" mat-button (click)="toggleSidenav()">
         Toggle sidenav
       </button>
     </div>
@@ -35,7 +39,9 @@
                 {{item.price | currency}}
               </div>
               <div>
-                <button>add to card</button>
+                <button type="button" mat-stroked-button (click)="toggleSidenav()">
+                  Add to card
+                </button>
               </div>
             </div>
           </div>

@@ -10,13 +10,22 @@ import { CartItem } from 'src/app/shared/models/CartItem';
 export class ShopComponent implements OnInit {
 
   public cartItems: CartItem[] = [];
+  public detailsViewOpened: boolean = false;
 
   constructor(private shopService: ShopService) {
     this.cartItems = shopService.getAllItems();
-    console.log(this.cartItems);
    }
 
-  ngOnInit(): void {
+  ngOnInit(): void
+  {
+  }
+
+  public getDetailsViewStatus() {
+    this.toggleSidenav();
+  }
+
+  public toggleSidenav() {
+    this.detailsViewOpened = !this.detailsViewOpened;
   }
 
 }

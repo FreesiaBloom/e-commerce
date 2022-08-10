@@ -13,4 +13,8 @@ export class ShopService {
   getAllItems(): CartItem[] {
     return sampleCartItem;
   }
+
+  getCartItem(id: string): CartItem {
+    return this.getAllItems().find(item => item.id === id) ?? new CartItem;
+  }
 }
